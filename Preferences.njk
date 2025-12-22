@@ -1,0 +1,104 @@
+---
+layout: layout.njk
+weather: rain
+---
+
+<div class="column is-12">
+  <section class="card p-5 has-text-centered">
+    <h1 class="title is-1">Preferences</h1>
+    <p class="subtitle is-size-3">Customise your dashboard display:</p>
+  </section>
+</div>
+
+{% set countries = ["Ireland", "Australia", "UK", "USA", "Japan", "Spain", "Russia"] %}
+
+<div class="column is-12">
+  <div class="columns is-multiline">
+
+    <!-- Column 1: Countries -->
+    <div class="column is-one-third">
+      <section class="card p-3">
+        <header class="card-header">
+          <p class="card-header-title is-centered">Countries</p>
+        </header>
+        <div class="card-content">
+          {% for country in countries %}
+            <div class="field">
+              <label class="checkbox">
+                <input type="checkbox" value="{{ country }}">
+                {{ country }}
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+
+    <!-- Column 2: Temperature & Wind -->
+    <div class="column is-one-third">
+      <section class="card p-3">
+        <header class="card-header">
+          <p class="card-header-title is-centered">Temperature & Wind</p>
+        </header>
+        <div class="card-content">
+          <div class="field">
+            <label class="radio">
+              <input type="radio" name="tempUnit" value="C">
+              Celsius
+            </label>
+          </div>
+          <div class="field">
+            <label class="radio">
+              <input type="radio" name="tempUnit" value="F">
+              Fahrenheit
+            </label>
+          </div>
+          <hr>
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" name="windSpeed">
+              Show Wind Speed
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Column 3: Dark Mode & Other Options -->
+    <div class="column is-one-third">
+      <section class="card p-3">
+        <header class="card-header">
+          <p class="card-header-title is-centered">Display & Preferences</p>
+        </header>
+        <div class="card-content">
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" name="darkMode">
+              Dark Mode
+            </label>
+          </div>
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" name="sound">
+              Sound On/Off
+            </label>
+          </div>
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" name="notifications">
+              Notifications
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Save Button Full Width Below Columns -->
+  <div class="columns">
+    <div class="column is-12 has-text-centered mt-4">
+      <button class="button is-primary is-medium">Save Preferences</button>
+    </div>
+  </div>
+</div>

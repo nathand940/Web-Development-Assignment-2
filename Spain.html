@@ -1,0 +1,44 @@
+---
+layout: layout.njk
+weather: sun
+---
+
+<div class="column is-12">
+  <section class="card p-5 has-text-centered">
+    <h1 class="title is-1">Spain</h1>
+    <p class="subtitle is-size-3">Today's Weather Forecast:</p>
+    <div class="content has-text-centered">
+      <p class="is-size-1"><strong>☀️ Very Hot — 21°C</strong></p>
+      <p class="is-size-1"><strong>💨 Wind speed - 4km/h</strong></p>
+    </div>
+  </section>
+</div>
+
+{% assign forecast = 
+  "Mon|☀️|Sunny|21|4,
+   Tue|☀️|Sunny|22|5,
+   Wed|🌤️|Warm|19|6,
+   Thu|☀️|Sunny|21|4,
+   Fri|☀️|Sunny|21|4,
+   Sat|🔥|Hot|26|5,
+   Sun|☁️|Cloudy|18|4"
+  | split: "," %}
+
+<div class="column is-12">
+  <div class="columns is-multiline is-mobile">
+
+    {% for item in forecast %}
+      {% assign parts = item | split: "|" %}
+      <div class="column is-one-seventh">
+        <section class="card has-text-centered p-3">
+          <p class="has-text-weight-bold">{{ parts[0] }}</p>
+          <p class="is-size-2">{{ parts[1] }}</p>
+          <p class="is-size-3">{{ parts[2] }}</p>
+          <p class="has-text-weight-semibold is-size-3">{{ parts[3] }}°C</p>
+          <p class="is-size-5">💨 {{ parts[4] }} km/h</p>
+        </section>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
