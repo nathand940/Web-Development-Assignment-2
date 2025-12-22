@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="weather-{{ weather | default('sun') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skysense - Reliable Weather Outlet</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/image/cloud.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"
+    />
+    <link rel="stylesheet" href="/css/weather.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body>
+    {% include "nav.njk" %}
+    <main class="columns is-multiline is-vcentered weather-surface">
+      {% include "header.njk" %} 
+      {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='{{ detailsPath }}';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        {{ country }} {{ icon }}
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        {{ description }}
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: {{ temperature }}°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: {{ wind }} km/h
+      </p>
+
+      {% if forecast %}
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        {% for day in forecast %}
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">{{ day.icon }}</span>
+          <strong>{{ day.date }}:</strong> {{ day.temp }}°C — {{ day.wind }} km/h — {{ day.desc }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
