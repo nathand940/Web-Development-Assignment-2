@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="weather-snow">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skysense - Reliable Weather Outlet</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/image/cloud.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"
+    />
+    <link rel="stylesheet" href="/css/weather.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar has-background-black">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/image/logo.png" alt="Logo">
+      </a>
+      <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end has-background-black">
+        <a href="/" class="navbar-item has-text-white">
+          Home
+        </a>
+        <a href="/Australia" class="navbar-item has-text-white">
+          Australia
+        </a>
+        <a href="/Ireland" class="navbar-item has-text-white">
+          Ireland
+        </a>
+        <a href="/Japan" class="navbar-item has-text-white">
+          Japan
+        </a>
+        <a href="/Spain" class="navbar-item has-text-white">
+          Spain
+        </a>
+        <a href="/Russia" class="navbar-item has-text-white">
+          Russia
+        </a>
+        <a href="/UK" class="navbar-item has-text-white">
+          United Kingdom
+        </a>
+        <a href="/USA" class="navbar-item has-text-white">
+          USA
+        </a>
+        <a href="/Preferences/" class="navbar-item has-text-white">
+          Settings
+        </a>
+      </div>
+    </div>
+  </nav>
+    <main class="columns is-multiline is-vcentered weather-surface">
+      <header class="column is-12 has-text-centered has-text-white">
+    <p id="page-heading" class="is-size-1">Weather Dashboard</p>
+  </header> 
+      
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/Australia/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        Australia ☀️
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Warm and sunny
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: 27°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 3 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Mon:</strong> 27°C — 3 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Tues:</strong> 28°C — 4 km/h — Hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌤️</span>
+          <strong>Wed:</strong> 25°C — 3 km/h — Warm
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Thurs:</strong> 26°C — 3 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Fri:</strong> 27°C — 2 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🔥</span>
+          <strong>Sat:</strong> 29°C — 3 km/h — Very hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> 24°C — 4 km/h — Cloudy
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/Ireland/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        Ireland 🌦️
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Mix of sunshine and showers
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: 12°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 14 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌧️</span>
+          <strong>Mon:</strong> 11°C — 12 km/h — Light rain
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Tues:</strong> 12°C — 13 km/h — Cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Wed:</strong> 13°C — 14 km/h — Sunny intervals
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌦️</span>
+          <strong>Thurs:</strong> 10°C — 16 km/h — Rain showers
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Fri:</strong> 12°C — 12 km/h — Partly cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Sat:</strong> 14°C — 11 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> 11°C — 14 km/h — Overcast
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/Japan/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        Japan ⛅
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Humid with some clouds
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: 18°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 6 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Mon:</strong> 18°C — 7 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Tues:</strong> 20°C — 6 km/h — Hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌤️</span>
+          <strong>Wed:</strong> 15°C — 7 km/h — Warm
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Thurs:</strong> 16°C — 5 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Fri:</strong> 17°C — 6 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Sat:</strong> 24°C — 6 km/h — Very hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> 17°C — 6 km/h — Cloudy
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/Russia/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        Russia ❄️
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Cold with cloudy skies
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: -2°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 10 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌨️</span>
+          <strong>Mon:</strong> -1°C — 9 km/h — Snow showers
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Tues:</strong> -3°C — 10 km/h — Cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">❄️</span>
+          <strong>Wed:</strong> -4°C — 8 km/h — Light snow
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌙</span>
+          <strong>Thurs:</strong> -2°C — 11 km/h — Clear and cold
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">❄️</span>
+          <strong>Fri:</strong> -1°C — 10 km/h — Snow
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🥶</span>
+          <strong>Sat:</strong> -5°C — 9 km/h — Very cold
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> -3°C — 10 km/h — Overcast
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/Spain/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        Spain ☀️
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Clear and sunny
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: 21°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 4 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Mon:</strong> 21°C — 4 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Tues:</strong> 22°C — 5 km/h — Hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌤️</span>
+          <strong>Wed:</strong> 19°C — 6 km/h — Warm
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Thurs:</strong> 21°C — 4 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Fri:</strong> 21°C — 4 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🔥</span>
+          <strong>Sat:</strong> 26°C — 5 km/h — Very hot
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> 18°C — 4 km/h — Cloudy
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/UK/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        United Kingdom 🌦️
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Cloudy with scattered showers
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: 14°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 13 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌧️</span>
+          <strong>Mon:</strong> 12°C — 13 km/h — Light rain
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Tues:</strong> 14°C — 13 km/h — Cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Wed:</strong> 16°C — 12 km/h — Sunny intervals
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌦️</span>
+          <strong>Thurs:</strong> 11°C — 12 km/h — Rain showers
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">⛅</span>
+          <strong>Fri:</strong> 16°C — 14 km/h — Partly cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☀️</span>
+          <strong>Sat:</strong> 17°C — 15 km/h — Sunny
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Sun:</strong> 13°C — 11 km/h — Overcast
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="column is-4">
+  <section class="card has-text-centered weather-card" onclick="location.href='/USA/index.html';" style="cursor: pointer;">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">
+        USA 🥶
+      </p>
+    </header>
+
+    <article class="card-content">
+
+      <p class="content is-size-4">
+        Snowy with cloudy skies
+      </p>
+
+      <p class="content is-size-4">
+        Current Temperature: -3°C
+      </p>
+
+      <p class="is-size-4">
+        Wind: 11 km/h
+      </p>
+
+      
+      <hr>
+      <p class="is-size-6"><strong>7-Day Forecast:</strong></p>
+
+      <ul style="list-style: none; padding-left: 0;">
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌨️</span>
+          <strong>Mon:</strong> -2°C — 11 km/h — Snow showers
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">☁️</span>
+          <strong>Tues:</strong> 3°C — 12 km/h — Cloudy
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🥶</span>
+          <strong>Wed:</strong> -4°C — 11 km/h — Light snow
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌨️</span>
+          <strong>Thurs:</strong> 2°C — 15 km/h — Clear and cold
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">❄️</span>
+          <strong>Fri:</strong> -2°C — 13 km/h — Snow
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🥶</span>
+          <strong>Sat:</strong> -6°C — 12 km/h — Very cold
+        </li>
+        
+        <li style="margin-bottom: 4px;">
+          <span style="font-size: 22px; margin-right: 6px;">🌨️</span>
+          <strong>Sun:</strong> 3°C — 11 km/h — Overcast
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    <footer class="card-footer">
+      <span class="card-footer-item button has-background-grey-lighter">
+        View Details
+      </span>
+    </footer>
+  </section>
+</div>
+
+    </main>
+    <footer class="footer has-background-black has-text-white">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <img class="image is-16x32 is-inline is-centered" src="/image/logo-black.png"> On Demand. Reliable. Accurate.
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
