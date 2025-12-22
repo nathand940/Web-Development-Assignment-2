@@ -1,0 +1,131 @@
+---
+layout: layout.njk
+title: Weather Dashboard
+weather: snow
+---
+
+{# --- Australia --- #}
+{% set country = "Australia" %}
+{% set description = "Warm and sunny" %}
+{% set temperature = 27 %}
+{% set wind = 3 %}
+{% set icon = "☀️" %}
+{% set detailsPath = "/Australia/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: 27, wind: 3, desc: "Sunny", icon: "☀️" },
+  { date: "Tues", temp: 28, wind: 4, desc: "Hot", icon: "☀️" },
+  { date: "Wed", temp: 25, wind: 3, desc: "Warm", icon: "🌤️" },
+  { date: "Thurs", temp: 26, wind: 3, desc: "Sunny", icon: "☀️" },
+  { date: "Fri", temp: 27, wind: 2, desc: "Sunny", icon: "☀️" },
+  { date: "Sat", temp: 29, wind: 3, desc: "Very hot", icon: "🔥" },
+  { date: "Sun", temp: 24, wind: 4, desc: "Cloudy", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- Ireland --- #}
+{% set country = "Ireland" %}
+{% set description = "Mix of sunshine and showers" %}
+{% set temperature = 12 %}
+{% set wind = 14 %}
+{% set icon = "🌦️" %}
+{% set detailsPath = "/Ireland/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: 11, wind: 12, desc: "Light rain", icon: "🌧️" },
+  { date: "Tues", temp: 12, wind: 13, desc: "Cloudy", icon: "☁️" },
+  { date: "Wed", temp: 13, wind: 14, desc: "Sunny intervals", icon: "⛅" },
+  { date: "Thurs", temp: 10, wind: 16, desc: "Rain showers", icon: "🌦️" },
+  { date: "Fri", temp: 12, wind: 12, desc: "Partly cloudy", icon: "⛅" },
+  { date: "Sat", temp: 14, wind: 11, desc: "Sunny", icon: "☀️" },
+  { date: "Sun", temp: 11, wind: 14, desc: "Overcast", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- Japan --- #}
+{% set country = "Japan" %}
+{% set description = "Humid with some clouds" %}
+{% set temperature = 18 %}
+{% set wind = 6 %}
+{% set icon = "⛅" %}
+{% set detailsPath = "/Japan/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: 18, wind: 7, desc: "Sunny", icon: "☀️" },
+  { date: "Tues", temp: 20, wind: 6, desc: "Hot", icon: "⛅" },
+  { date: "Wed", temp: 15, wind: 7, desc: "Warm", icon: "🌤️" },
+  { date: "Thurs", temp: 16, wind: 5, desc: "Sunny", icon: "⛅" },
+  { date: "Fri", temp: 17, wind: 6, desc: "Sunny", icon: "☀️" },
+  { date: "Sat", temp: 24, wind: 6, desc: "Very hot", icon: "☀️" },
+  { date: "Sun", temp: 17, wind: 6, desc: "Cloudy", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- Russia --- #}
+{% set country = "Russia" %}
+{% set description = "Cold with cloudy skies" %}
+{% set temperature = -2 %}
+{% set wind = 10 %}
+{% set icon = "❄️" %}
+{% set detailsPath = "/Russia/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: -1, wind: 9, desc: "Snow showers", icon: "🌨️" },
+  { date: "Tues", temp: -3, wind: 10, desc: "Cloudy", icon: "☁️" },
+  { date: "Wed", temp: -4, wind: 8, desc: "Light snow", icon: "❄️" },
+  { date: "Thurs", temp: -2, wind: 11, desc: "Clear and cold", icon: "🌙" },
+  { date: "Fri", temp: -1, wind: 10, desc: "Snow", icon: "❄️" },
+  { date: "Sat", temp: -5, wind: 9, desc: "Very cold", icon: "🥶" },
+  { date: "Sun", temp: -3, wind: 10, desc: "Overcast", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- Spain --- #}
+{% set country = "Spain" %}
+{% set description = "Clear and sunny" %}
+{% set temperature = 21 %}
+{% set wind = 4 %}
+{% set icon = "☀️" %}
+{% set detailsPath = "/Spain/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: 21, wind: 4, desc: "Sunny", icon: "☀️" },
+  { date: "Tues", temp: 22, wind: 5, desc: "Hot", icon: "☀️" },
+  { date: "Wed", temp: 19, wind: 6, desc: "Warm", icon: "🌤️" },
+  { date: "Thurs", temp: 21, wind: 4, desc: "Sunny", icon: "☀️" },
+  { date: "Fri", temp: 21, wind: 4, desc: "Sunny", icon: "☀️" },
+  { date: "Sat", temp: 26, wind: 5, desc: "Very hot", icon: "🔥" },
+  { date: "Sun", temp: 18, wind: 4, desc: "Cloudy", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- United Kingdom --- #}
+{% set country = "United Kingdom" %}
+{% set description = "Cloudy with scattered showers" %}
+{% set temperature = 14 %}
+{% set wind = 13 %}
+{% set icon = "🌦️" %}
+{% set detailsPath = "/UK/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: 12, wind: 13, desc: "Light rain", icon: "🌧️" },
+  { date: "Tues", temp: 14, wind: 13, desc: "Cloudy", icon: "☁️" },
+  { date: "Wed", temp: 16, wind: 12, desc: "Sunny intervals", icon: "⛅" },
+  { date: "Thurs", temp: 11, wind: 12, desc: "Rain showers", icon: "🌦️" },
+  { date: "Fri", temp: 16, wind: 14, desc: "Partly cloudy", icon: "⛅" },
+  { date: "Sat", temp: 17, wind: 15, desc: "Sunny", icon: "☀️" },
+  { date: "Sun", temp: 13, wind: 11, desc: "Overcast", icon: "☁️" }
+] %}
+{% include "weather-card-component.njk" %}
+
+{# --- USA --- #}
+{% set country = "USA" %}
+{% set description = "Snowy with cloudy skies" %}
+{% set temperature = -3 %}
+{% set wind = 11 %}
+{% set icon = "🥶" %}
+{% set detailsPath = "/USA/index.html" %}
+{% set forecast = [
+  { date: "Mon", temp: -2, wind: 11, desc: "Snow showers", icon: "🌨️" },
+  { date: "Tues", temp: 3, wind: 12, desc: "Cloudy", icon: "☁️" },
+  { date: "Wed", temp: -4, wind: 11, desc: "Light snow", icon: "🥶" },
+  { date: "Thurs", temp: 2, wind: 15, desc: "Clear and cold", icon: "🌨️" },
+  { date: "Fri", temp: -2, wind: 13, desc: "Snow", icon: "❄️" },
+  { date: "Sat", temp: -6, wind: 12, desc: "Very cold", icon: "🥶" },
+  { date: "Sun", temp: 3, wind: 11, desc: "Overcast", icon: "🌨️" }
+] %}
+{% include "weather-card-component.njk" %}
